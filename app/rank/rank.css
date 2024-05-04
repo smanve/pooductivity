@@ -1,0 +1,42 @@
+body {
+    background-color: #32365F;
+}
+
+.rectangle {
+    position: absolute;
+    left: 48px;
+    top: 200px;
+    width: 286.5px;
+    height: 308.5px;
+    background-color: #5E4EBC;
+    border-radius: 20px;
+}
+
+input [type="radio"] {
+    display: none;
+}
+
+.star {
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+@font-face {
+    font-family: cherry;
+    src: url("/CherryBombOne-Regular.ttf");
+}
+
+ating {
+    font-family: cherry;
+}
+
+
+.rectangle2 {
+    position: absolute;
+    left: 48px;
+    top: 280px;
+    width: 286.5px;
+    height: 308.5px;
+    background-color: #DBD6FA;
+    border-radius: 20px;
+}
