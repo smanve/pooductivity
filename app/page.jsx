@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
+import Link from 'next/link' // Import the Link component
 const Logo = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Logo), { ssr: false })
 const Dog = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Dog), { ssr: false })
 const Duck = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Duck), { ssr: false })
@@ -32,6 +33,11 @@ export default function Page() {
           <p className='w-full uppercase'>Next + React Three Fiber</p>
           <h1 className='my-4 text-5xl font-bold leading-tight'>Next 3D Starter</h1>
           <p className='mb-8 text-2xl leading-normal'>A minimalist starter for React, React-three-fiber and Threejs.</p>
+          {/* Navigation Links */}
+          <nav>
+            <Link href="/about"><a className='mr-4'>About Us</a></Link>
+            <Link href="/contact"><a>Contact Us</a></Link>
+          </nav>
         </div>
 
         <div className='w-full text-center md:w-3/5'>
