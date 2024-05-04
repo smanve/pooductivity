@@ -114,7 +114,7 @@ const Chart = () => {
 
   return (
     <div>
-     <h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+     <h1 className="text-3xl font-bold underline">Your scheduled tasks</h1>
       <div>
         <label htmlFor="sortCriteria" className="mr-2">Sort Tasks By:</label>
         <select id="sortCriteria" value={sortCriteria} onChange={handleSortChange} className="">
