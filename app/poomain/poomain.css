@@ -1,0 +1,188 @@
+.home-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #32365F 66%, #A01C1C 0%);
+    padding: 20px;
+    position: relative;
+    /* Make the container position relative */
+}
+
+.contact-container {
+    display: absolute;
+    flex-direction: column;
+    margin-left: 1100px;
+    margin-top: -40px;
+    align-items: right;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, #32365F 66%, #32365F 0%);
+}
+
+
+
+.shop-container {
+    position: absolute;
+    flex-direction: column;
+    align-items: right;
+    justify-content: flex-end;
+    margin-left: 1050px;
+    margin-bottom: -550px;
+    background: linear-gradient(to bottom, #A01C1C 66%, #A01C1C 0%);
+}
+
+.images-container {
+    display: flex;
+    /* Ensure this container displays its children side by side */
+    justify-content: flex-start;
+    /* Align children to the start of the container */
+    width: 100%;
+}
+
+.notes-image {
+    width: 400px;
+    /* Adjust size according to your image */
+    height: 400px;
+    /* Maintain the aspect ratio */
+    margin-right: 35px;
+    margin-top: 110px;
+    /* Add space between images */
+    z-index: 2;
+    /* Ensure images are displayed in front of the triangle */
+}
+
+.poo-image {
+    width: 550px;
+    /* Adjust size according to your image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    margin-right: 0px;
+    margin-top: 100px;
+    /* Add space between images */
+    z-index: 2;
+    /* Ensure images are displayed in front of the triangle */
+}
+
+
+.frame-image {
+    width: 170px;
+    /* Adjust size according to your image */
+    height: 200px;
+    margin-top: 50px;
+    /* Maintain the aspect ratio */
+    margin-left: 130px;
+    /* Add space between images */
+    z-index: 2;
+    /* Ensure images are displayed in front of the triangle */
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 430px solid rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(20px);
+    /* Add the blur effect */
+    margin-top: 35px;
+    margin-left: 10px;
+    border-radius: 1000px;
+}
+
+.image-text1 {
+    position: absolute;
+    top: 56%;
+    left: 14%;
+    /* Adjusted from 50% to 30% to shift the text to the left */
+    transform: translate(-50%, -50%);
+    color: black;
+    /* Color of the text */
+    font-size: 17px;
+    /* Size of the text */
+    z-index: 3;
+    line-height: 3;
+    /* Ensure the text appears above the image */
+}
+
+.image-text2 {
+    position: absolute;
+    top: 36%;
+    left: 14%;
+    /* Adjusted from 50% to 30% to shift the text to the left */
+    transform: translate(-50%, -50%);
+    color: black;
+    /* Color of the text */
+    font-size: 40px;
+    /* Size of the text */
+    z-index: 3;
+    font-weight: bolder;
+    /* Ensure the text appears above the image */
+}
+
+.image-text20 {
+    position: absolute;
+    top: 22%;
+    left: 51%;
+    /* Adjusted from 50% to 30% to shift the text to the left */
+    transform: translate(-50%, -50%);
+    color: white;
+    /* Color of the text */
+    font-size: 70px;
+    /* Size of the text */
+    z-index: 3;
+    font-weight: 800;
+    /* Ensure the text appears above the image */
+}
+
+.image-text3 {
+    position: absolute;
+    top: 85%;
+    left: 14%;
+    /* Adjusted from 50% to 30% to shift the text to the left */
+    transform: translate(-50%, -50%);
+    color: white;
+    /* Color of the text */
+    font-size: 27px;
+    /* Size of the text */
+    z-index: 3;
+    /* Ensure the text appears above the image */
+    text-align: center;
+}
+
+.coin-image {
+    position: absolute;
+    width: 80px;
+    /* Adjust size according to your image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    top: 30px;
+    left: 30px;
+
+    /* Add space between images */
+    z-index: 2;
+    /* Ensure images are displayed in front of the triangle */
+}
+
+.coin-image1 {
+    display: absolute;
+    width: 50px;
+    margin-left: -500px;
+    margin-top: -50px;
+    height: auto;
+    z-index: 2;
+}
+
+.image-text30 {
+    position: absolute;
+    font-size: 27px;
+    color: white;
+    top: 42px;
+    left: 108px;
+    z-index: 2;
+}
