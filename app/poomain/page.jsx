@@ -84,7 +84,7 @@ const PooMain = () => {
             <div className="shop-container">
                 <Shop />
             </div>
-            <div style={{ display: 'absolute', justifyContent: 'space-around', marginTop: '-7px', marginLeft: '995px', fontSize: '21px', fontWeight: 'bold', color: 'white' }}>
+            <div style={{ display: 'absolute', justifyContent: 'space-around', fontFamily: "'Sometype Mono', monospace", marginTop: '-7px', marginLeft: '995px', fontSize: '21px', fontWeight: 'bold', color: 'white' }}>
                 <span style={{ margin: '0 31px' }}>Closet</span>
                 <span style={{ margin: '0 34px' }}>Medals</span>
                 <span style={{ margin: '0 31px' }}>Shop</span>

@@ -7,8 +7,13 @@ import notesImage from '../../public/notes.png';
 import POO from '../../public/POO.png';
 import frameImage from '../../public/frame.png';
 import NavBar from '../navbar/page';
+import './pooshop.css';
 
 
+
+const fontStyle = {
+    fontFamily: "'Sometype Mono', monospace",
+};
 
 export default function PooShop() {
     const items = {
@@ -51,7 +56,7 @@ export default function PooShop() {
         <div className="h-screen items-center justify-end overflow-hidden" style={{ backgroundColor: '#32365F' }}>
             <NavBar />
             <div className="flex h-full">
-                <button className="rounded-lg bg-blue-500 px-8 py-3 text-lg font-bold text-black shadow-md" style={{ position: 'absolute', marginTop: '630px', marginLeft: '775px', backgroundColor: '#E7E1D5', fontSize: '30px', borderRadius: '25px', paddingLeft: '60px', paddingRight: '60px', boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.2)' }}>
+                <button className="rounded-lg bg-blue-500 px-8 py-3 text-lg font-bold text-black shadow-md" style={{ fontFamily: "'Sometype Mono', monospace", position: 'absolute', marginTop: '630px', marginLeft: '775px', backgroundColor: '#E7E1D5', fontSize: '30px', borderRadius: '25px', paddingLeft: '60px', paddingRight: '60px', boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.2)' }}>
                     Buy
                 </button>
                 <div className="absolute left-0 top-0 opacity-50" style={{ backgroundColor: 'black', width: '500px', height: '500px', zIndex: 0, borderRadius: '25px', marginLeft: '600px', marginTop: '210px' }}></div>
@@ -60,7 +65,7 @@ export default function PooShop() {
                         {items[activeCategory].map(item => (
                             <div key={item.id} className="flex flex-col items-center rounded-lg bg-red-500 p-2 shadow" style={{ backgroundColor: '#AA2828', width: '140px', height: '140px', zIndex: 1, boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.2)' }}>
                                 <Image src={item.img} alt={item.name} width={70} height={70} />
-                                <p className="text-lg text-white">{`$${item.price}`}</p>
+                                <p className="text-lg text-white" style={fontStyle}>{`$${item.price}`}</p>
                             </div>
                         ))}
                     </div>
