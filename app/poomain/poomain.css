@@ -5,18 +5,12 @@
     justify-content: center;
     height: 100vh;
     background: linear-gradient(to bottom, #32365F 66%, #A01C1C 0%);
-    padding: 20px;
     position: relative;
     /* Make the container position relative */
 }
 
 .contact-container {
     display: absolute;
-    flex-direction: column;
-    margin-left: 1100px;
-    margin-top: -40px;
-    align-items: right;
-    justify-content: flex-end;
     background: linear-gradient(to bottom, #32365F 66%, #32365F 0%);
 }
 
@@ -45,8 +39,9 @@
     /* Adjust size according to your image */
     height: 400px;
     /* Maintain the aspect ratio */
-    margin-right: 35px;
-    margin-top: 110px;
+    margin-left: 25px;
+    margin-right: 10px;
+    margin-top: 95px;
     /* Add space between images */
     z-index: 2;
     /* Ensure images are displayed in front of the triangle */
@@ -57,7 +52,8 @@
     /* Adjust size according to your image */
     height: auto;
     /* Maintain the aspect ratio */
-    margin-right: 0px;
+    margin-left: 20px;
+    margin-right: -10px;
     margin-top: 100px;
     /* Add space between images */
     z-index: 2;
@@ -152,6 +148,7 @@
     /* Size of the text */
     z-index: 3;
     /* Ensure the text appears above the image */
+    font-weight: bold;
     text-align: center;
 }
 
@@ -182,7 +179,7 @@
     position: absolute;
     font-size: 27px;
     color: white;
-    top: 42px;
+    top: 1px;
     left: 108px;
     z-index: 2;
 }
