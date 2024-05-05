@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaStar } from "react-icons/fa";
 
 const StarRating = ({ onStarSelect }) => {
     const [rating, setRating] = useState(0);
