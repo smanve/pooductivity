@@ -39,7 +39,7 @@ const PooMain = () => {
                                 <Image src={POO} alt="About Us" width={70} height={70} />
                             </a>
                         </Link>
-                        <Link href="/pooshop">
+                        <Link href="/theme">
                             <a className="nav-link " style={{ marginTop: '5px', marginRight: '30px', display: 'flex', alignItems: 'center', zIndex: 1 }}>
                                 <Image src={trophyIcon} alt="Contact Us" width={60} height={60} />
                             </a>

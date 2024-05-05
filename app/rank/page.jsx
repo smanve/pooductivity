@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import './rank.css'; // Ensure this CSS file contains styles for rectangles and images
 import Image from 'next/image';
 import StarRating from './StarRating';
+import NavBar from "@/navbar/page";
 
 function Page() {
     const [users, setUsers] = useState([
@@ -26,6 +27,7 @@ function Page() {
 
     return (
         <div style={{ position: 'relative' }}>
+            <NavBar />
 
             <div className="rectangle" style={{
             }}></div>

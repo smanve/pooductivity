@@ -25,7 +25,7 @@ export default function NavBar() {
                     </a>
                 </Link>
                 {/* Link to Contact Us page with image */}
-                <Link href="/pooshop">
+                <Link href="/theme">
                     <a className="nav-link" style={{ marginTop: '5px', marginRight: '30px', display: 'flex', alignItems: 'center', zIndex: 1 }}>
                         <Image src={trophyIcon} alt="Contact Us" width={60} height={60} />
                     </a>
