@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
 body {
     background-color: #32365F;
 }
 
 .rectangle {
     position: absolute;
-    left: 48px;
-    top: 200px;
+    left: 100px;
+    top: 170px;
     width: 286.5px;
     height: 308.5px;
     background-color: #5E4EBC;
@@ -14,6 +17,11 @@ body {
 
 input [type="radio"] {
     display: none;
+}
+
+.snow-day {
+    font-family: 'Cherry Bomb One', cursive;
+    /* Apply the custom font */
 }
 
 .star {
@@ -33,10 +41,21 @@ ating {
 
 .rectangle2 {
     position: absolute;
-    left: 48px;
-    top: 280px;
+    left: 100px;
+    top: 260px;
     width: 286.5px;
     height: 308.5px;
     background-color: #DBD6FA;
+    border-radius: 20px;
+}
+
+
+.rectangle3 {
+    position: absolute;
+    left: 100px;
+    top: 290px;
+    width: 260x;
+    height: 100px;
+    background-color: #f9f9f9;
     border-radius: 20px;
 }
