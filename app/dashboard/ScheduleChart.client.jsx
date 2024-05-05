@@ -21,7 +21,6 @@ const GanttChart = ({ data, sortCriteria }) => {
   const options = {
     height: 400,
     gantt: {
-    
       trackHeight: 30,
       labelStyle: {
         fontName: "Helvetica",
