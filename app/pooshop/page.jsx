@@ -5,8 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import notesImage from '../../public/notes.png';
 import frameImage from '../../public/frame.png';
-import NavBar from '../navbar/page';
 import POO from '../../public/POO.png';
+import NavBar from '../navbar/page';
+import fit1 from '../../public/fit1.png';
+import fit2 from '../../public/fit2.png';
+import fit3 from '../../public/fit3.png';
 import './pooshop.css';
 
 // Import the POO image
@@ -19,23 +22,22 @@ const fontStyle = {
 export default function PooShop() {
     const items = {
         scarf: [
-            { id: 1, price: 50, img: POO },
-            { id: 2, price: 55, img: POO },
-            { id: 3, price: 20, img: frameImage },
-            { id: 4, price: 75, img: POO },
-            { id: 5, price: 95, img: notesImage },
-            { id: 1, price: 50, img: notesImage },
-            { id: 2, price: 55, img: POO },
-            { id: 3, price: 20, img: frameImage },
+            { id: 1, price: 50, img: fit1 },
+            { id: 2, price: 55, img: fit2 },
+            { id: 3, price: 20, img: fit3 },
+            { id: 4, price: 50, img: fit1 },
+            { id: 5, price: 55, img: fit2 },
+            { id: 6, price: 20, img: fit3 },
         ],
         glasses: [
-            { id: 1, price: 50, img: notesImage },
-            { id: 2, price: 55, img: POO },
+            { id: 1, price: 50, img: fit1 },
+            { id: 2, price: 55, img: fit2 },
+            { id: 3, price: 20, img: fit3 },
         ],
         shirt: [
-            { id: 1, price: 50, img: notesImage },
-            { id: 2, price: 55, img: POO },
-            { id: 3, price: 20, img: frameImage },
+            { id: 1, price: 50, img: fit1 },
+            { id: 2, price: 55, img: fit2 },
+            { id: 3, price: 20, img: fit3 },
         ],
         bow: [
             { id: 2, price: 55, img: POO },
