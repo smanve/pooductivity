@@ -1,9 +1,13 @@
 'use client';
 
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import ScheduleChart from './scheduleChart.client';
   // Task data from the server or local
-  const tasks = [
+
+const Chart = () => { 
+
+  //use state for tasks
+  const [tasks, setTasks] = useState([
     {
       "title": "Assignment 1- FIT2101",
       "due_date": new Date(2024, 5, 6),
@@ -40,9 +44,10 @@ import ScheduleChart from './scheduleChart.client';
       "expected_time_days": 5,  // Changed to days
       "priority": 3
     }
-  ];
+  ]);
 
-const Chart = () => { 
+  const [rows, setRows] = useState('');
+
   // State to hold the selected sorting criteria
   const [sortCriteria, setSortCriteria] = useState('dueDate');
 
@@ -51,38 +56,54 @@ const Chart = () => {
     setSortCriteria(event.target.value);
   };
 
+  const customSort = (tasks) => {
+      for (let i = 0; i < tasks.length - 1; i++) {
+          for (let j = i + 1; j < tasks.length; j++) {
+              // Calculate deadlines
+              const deadlineA = new Date(tasks[i].due_date.getTime() + tasks[i].expected_time_days * 24 * 60 * 60 * 1000);
+              const deadlineB = new Date(tasks[j].due_date.getTime() + tasks[j].expected_time_days * 24 * 60 * 60 * 1000);
 
-    // State to keep track of sorting preference
-  // const [sortPreference, setSortPreference] = useState('dueDate'); // Default to 'dueDate'
-
-  // Function to sort tasks based on the current preference
-  const sortedTasks = tasks.sort((a, b) => {
-    if (sortCriteria === 'priority') {
-      if (a.priority !== b.priority) {
-        return b.priority - a.priority; // Assuming priority is numeric, higher is more important
+              // Compare deadlines
+              if (deadlineA.getTime() === deadlineB.getTime()) {
+                  // If deadlines are the same, sort based on priority
+                  if (tasks[i].priority > tasks[j].priority) {
+                      // Swap tasks
+                      const temp = tasks[i];
+                      tasks[i] = tasks[j];
+                      tasks[j] = temp;
+                  }
+              } else if (deadlineA.getTime() > deadlineB.getTime()) {
+                  // If deadline of task A is after deadline of task B, swap if priority of task A is higher
+                  if (tasks[i].priority > tasks[j].priority) {
+                      // Swap tasks
+                      const temp = tasks[i];
+                      tasks[i] = tasks[j];
+                      tasks[j] = temp;
+                  }
+              }
+          }
       }
-      return a.due_date - b.due_date; // Secondary sort by due date if priorities are equal
-    }
-    return a.due_date - b.due_date; // Primary sort by due date
-  });
-  // Convert priorities to numerical values for sorting
-  const priorityMap = {
-    "high": 3,
-    "medium": 2,
-    "low": 1
+      return tasks;
   };
 
-  // Sort tasks based on due date and priority
-  tasks.sort((a, b) => {
-    if (a.due_date < b.due_date) {
-      return -1;
-    } else if (a.due_date > b.due_date) {
-      return 1;
-    } else {
-      return b.priority - a.priority;
+  useEffect(() => { 
+    let sortedTasks = [];
+    if (sortCriteria === 'priority') {
+      sortedTasks = customSort(tasks);
+    } else { 
+      // Sort tasks based on due date and priority
+      let sortedTasks = tasks;
+      sortedTasks.sort((a, b) => {
+        if (a.due_date < b.due_date) {
+          return -1;
+        } else if (a.due_date > b.due_date) {
+          return 1;
+        } else {
+          return b.priority - a.priority;
+        }
+      });
     }
-  });
-    
+
   let currentStartTime = new Date(); // Start from now
   const rows = tasks.map((task, index) => {
     const durationDays = task.expected_time_days; // Duration in days
@@ -111,7 +132,9 @@ const Chart = () => {
     currentStartTime = endTime; // Update start time for the next task
     return row;
   });
-
+    setRows(rows);
+  }, [tasks, sortCriteria]);
+  
   return (
     <div>
      <h1 className="text-3xl font-bold underline">Your scheduled tasks</h1>
