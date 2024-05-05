@@ -12,7 +12,7 @@ export default function Contact() {
         <div>
             <nav style={{ marginTop: '20px', marginRight: '50px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                 {/* Link to About Us page with image */}
-                <Link href="/poomedal">
+                <Link href="/pooinventory">
                     <a className="nav-link" style={{ marginTop: '5px', marginRight: '50px', display: 'flex', alignItems: 'center', flexDirection: 'column', textAlign: 'center' }}>
                         <Image src={clothesIcon} alt="About Us" width={95} height={95} />
 

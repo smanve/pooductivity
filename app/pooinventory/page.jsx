@@ -71,7 +71,7 @@ export default function PooShop() {
                         {items[activeCategory].map(item => (
                             <div key={item.id} className="flex flex-col items-center rounded-lg bg-red-500 p-2 shadow" style={{ backgroundColor: '#AA2828', width: '140px', height: '140px', zIndex: 1, boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.2)' }}>
                                 <Image src={item.img} alt={item.name} width={70} height={70} />
-                                <p className="text-lg text-white" style={fontStyle}>{`$${item.price}`}</p>
+
                             </div>
                         ))}
                     </div>
