@@ -11,7 +11,7 @@ export default function LogIn() {
     return (
         <div className="video-container">
             <video autoPlay muted loop className="background-video">
-                <source src="/boat-video.mp4" type="video/mp4" />
+                <source src="/bg.mp4" type="video/mp4" />
             </video>
             <div className="signup-form-container">
                 <form className="signup-form">
