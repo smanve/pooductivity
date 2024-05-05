@@ -23,7 +23,7 @@ function Page() {
 
             <div style={{ position: 'absolute', top: '54%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'white', fontSize: '36px' }}>
                 <p style={{ fontSize: '70px', color: "#FFD80B", fontFamily: "Cherry Bomb One, system-ui" }}>Theme for today: </p>
-                <p style={{ fontSize: '100px', marginBottom: '36px', fontFamily: "Cherry Bomb One, system-ui" }}>Beach Day</p>
+                <p style={{ fontSize: '100px', marginBottom: '36px', fontFamily: "Cherry Bomb One, system-ui" }}>Snow Day</p>
             </div>
 
             {/* Use Link component to navigate to "/rank" */}

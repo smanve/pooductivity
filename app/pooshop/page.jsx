@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import notesImage from '../../public/notes.png';
 import frameImage from '../../public/frame.png';
-import POO from '../../public/POO.png';
+import POOS from '../../public/POOS.png';
 import NavBar from '../navbar/page';
 import fit1 from '../../public/fit1.png';
 import fit2 from '../../public/fit2.png';
@@ -59,7 +59,7 @@ export default function PooShop() {
         <div className="h-screen items-center justify-end overflow-hidden" style={{ backgroundColor: '#32365F' }}>
             <NavBar />
             <div className="flex h-full">
-                <Image src={POO} alt="POO Image" width={400} height={400} style={{ position: 'absolute', top: 280, left: 35, zIndex: 9999 }} />
+                <Image src={POOS} alt="POO Image" width={400} height={400} style={{ position: 'absolute', top: 280, left: 35, zIndex: 9999 }} />
                 <button className="button-effect">
                     Buy
                 </button>

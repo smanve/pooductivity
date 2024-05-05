@@ -29,24 +29,30 @@ function Page() {
 
         <div style={{ position: 'relative' }}>
             <NavBar />
+            <div style={{ position: 'absolute', color: 'white', fontSize: '25px', paddingLeft: '100px', paddingTop: '50px', paddingBottom: '60px', fontFamily: "Sometype Mono, monospace" }}>
+                <b>Time left:</b> 10h 2m
+            </div>
 
             <div className="rectangle" style={{
+                top: '240px'
             }}></div>
-            <div className="rectangle2"></div>
+            <div className="rectangle2" style={{
+                top: '315px'
+            }} ></div>
             <div
                 style={{
                     position: 'absolute',
-                    left: '620px',
-                    top: '650px',
+                    left: '650px',
+                    top: '750px',
                 }}
             >
-                <StarRating onStarSelect={handleStarSelect} />
+                <StarRating size="small" onStarSelect={handleStarSelect} />
             </div>
 
             <div
                 style={{
                     position: 'absolute',
-                    left: '820px',
+                    left: '853px',
                     top: '500px',
                     transform: 'translate(-50%, -50%)',
                     fontSize: '24px',
@@ -58,8 +64,8 @@ function Page() {
                 <Image
                     src="/img/poo.png"
                     alt="poo"
-                    width={300}
-                    height={300}
+                    width={400}
+                    height={400}
                 />
             </div>
 
@@ -67,7 +73,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '120px',
-                    top: '290px',
+                    top: '310px',
                     fontSize: '30px',
                     borderSpacing: '10px', // Add spacing between cells
                     zIndex: 20, // Ensure the table appears in front
@@ -94,8 +100,8 @@ function Page() {
 
                 style={{
                     position: 'absolute',
-                    left: '820px',
-                    top: '300px',
+                    left: '840px',
+                    top: '280px',
                     transform: 'translate(-50%, -50%)',
                     fontSize: '24px',
                     color: 'black',
@@ -111,10 +117,11 @@ function Page() {
             <div
                 style={{
                     position: 'absolute',
-                    left: '820px',
-                    top: '280px',
+                    left: '840px',
+                    top: '260px',
                     transform: 'translate(-50%, -50%)',
                     fontSize: '24px',
+                    fontWeight: 'bold',
                     color: 'black',
                     fontFamily: "Sometype Mono, monospace",
                     zIndex: 1,
@@ -128,7 +135,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '869px',
-                    top: '110px',
+                    top: '133px',
                     transform: 'translate(-50%, -50%)',
                     fontSize: '52px',
                     color: '#992121',
@@ -144,7 +151,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '180px',
-                    top: '130px',
+                    top: '190px',
                 }}
             >
                 <Image
@@ -158,7 +165,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '600px',
-                    top: '80px',
+                    top: '100px',
                 }}
             >
                 <Image
@@ -172,7 +179,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '345px',
-                    top: '375px',
+                    top: '395px',
                     zIndex: 50,
                 }}
             >
@@ -189,7 +196,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '345px',
-                    top: '440px',
+                    top: '460px',
                     zIndex: 50,
                 }}
             >
@@ -205,7 +212,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '345px',
-                    top: '500px',
+                    top: '526px',
                     zIndex: 50,
                 }}
             >
@@ -220,7 +227,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '60px',
-                    top: '360px',
+                    top: '385px',
                     zIndex: 2, // Adjust the z-index to make it appear in front
                 }}
             >
@@ -233,7 +240,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '60px',
-                    top: '430px',
+                    top: '520px',
                     zIndex: 2, // Adjust the z-index to make it appear in front
                 }}
             >
@@ -246,7 +253,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '60px',
-                    top: '490px',
+                    top: '450px',
                     zIndex: 2, // Adjust the z-index to make it appear in front
                 }}
             >
@@ -259,7 +266,7 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '550px',
-                    top: '180px',
+                    top: '200px',
                 }}
             >
                 <Image

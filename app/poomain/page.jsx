@@ -44,7 +44,7 @@ const PooMain = () => {
                                 <Image src={trophyIcon} alt="Contact Us" width={60} height={60} />
                             </a>
                         </Link>
-                        <Link href="/contact">
+                        <Link href="/dashboard">
                             <a className="nav-link " style={{ marginTop: '5px', display: 'flex', alignItems: 'center', zIndex: 1 }}>
                                 <Image src={calendarIcon} alt="Contact Us" width={60} height={60} />
                             </a>

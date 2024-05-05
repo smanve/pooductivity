@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import notesImage from '../../public/notes.png';
 import frameImage from '../../public/frame.png';
-import POO from '../../public/POO.png';
+import POO from '../../public/POOS.png';
 import NavBar from '../navbar/page';
 import fit1 from '../../public/fit1.png';
 import fit2 from '../../public/fit2.png';

@@ -15,7 +15,7 @@ const StarRating = ({ onStarSelect }) => {
 
                     key={i}
                     onClick={() => handleStarClick(i + 1)}
-                    style={{ fontSize: "90px", color: rating >= i + 1 ? "#ffc107" : "#e4e5e9" }}
+                    style={{ marginTop: "-80px", paddingTop: "-20px", paddingRight: '15px', fontSize: "70px", color: rating >= i + 1 ? "#ffc107" : "#e4e5e9" }}
                     onMouseEnter={() => setRating(i + 1)}
                     onMouseLeave={() => setRating(0)}
                 >

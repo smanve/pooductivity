@@ -137,21 +137,21 @@ const Chart = () => {
   }, [tasks, sortCriteria]);
 
   return (
-    <div style={{ color: '#FFFFFF', backgroundColor: '#32365F', padding: '20px' }}>
-      <h1 className="text-8xl font-bold text-center font-cherry-bomb-one">Your Tasks</h1>
+    <div style={{ color: '#FFFFFF', backgroundColor: '#32365F' }}>
+      <h1 className="font-cherry-bomb-one text-center text-8xl font-bold" style={{ paddingBottom: '20px' }}>Your Tasks</h1>
       <div className="mb-10"></div>
-      <div>
+      <div style={{ paddingBottom: '10px' }}>
 
-        <label htmlFor="sortCriteria" className="mr-2" style={{ color: '#ffffff' }}>Sort Tasks By:</label>
+        <label htmlFor="sortCriteria" className="mr-2" style={{ color: '#ffffff', fontFamily: "'Sometype Mono', monospace" }}>Sort Tasks By:</label>
         <select id="sortCriteria" value={sortCriteria} onChange={handleSortChange} className="text-black">
-          <option value="dueDate" className="text-black">Due Date</option>
-          <option value="priority" className="text-black">Priority</option>
+          <option value="dueDate" className="text-black" style={{ fontFamily: "'Sometype Mono', monospace" }}>Due Date</option>
+          <option value="priority" className="text-black" style={{ fontFamily: "'Sometype Mono', monospace" }}>Priority</option>
         </select>
 
       </div>
-      <p className="text-white text-xl font-bold mt-6 mb-4">
-        <span className="mr-50"> </span>
-        <span className="ml-10 mr-20">May 7</span>
+      <p className="mb-4 mt-6 text-xl font-bold text-white" style={{ fontFamily: "'Sometype Mono', monospace" }}>
+        <span className="mr-20"> </span>
+        <span className="ml-40 mr-20">May 7</span>
         <span className="mr-20">May 9</span>
         <span className="mr-20">May 12</span>
         <span className="mr-20">May 15</span>
