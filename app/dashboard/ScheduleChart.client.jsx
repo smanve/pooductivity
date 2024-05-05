@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import './schedules.css';
 import { Chart } from 'react-google-charts';
 
 const GanttChart = ({ data, sortCriteria }) => {
@@ -19,15 +20,20 @@ const GanttChart = ({ data, sortCriteria }) => {
   const chartData = [columns, ...data];
 
   const options = {
-    height: 400,
+    height: 300, // Increased chart height
+    chartArea: {
+      backgroundColor: '#5A6374', // Set the background color of the chart area
+    },
     gantt: {
-      trackHeight: 30,
+      trackHeight: 50,
       labelStyle: {
         fontName: "Helvetica",
-        fontSize: 14,
+        fontSize: 25,
+        padding: 20,
+        backgroundColor: '#5A6374',
         color: '#757575'  // You can customize the font color here
       },
-      barHeight: 20,  // Adjust as necessary
+      barHeight: 45,  // Adjust as necessary
       // Customizing the date format on the x-axis
       axisTextStyle: { color: '#000' },  // Adjust text style if needed
       percentEnabled: false,  // Optional: Adjust whether to show completion percentage
@@ -39,10 +45,13 @@ const GanttChart = ({ data, sortCriteria }) => {
       },
       // Define date format for the x-axis
       defaultStartDateMillis: new Date().getTime(),  // Adjust the chart start date
-      datePattern: 'yyyy-MM-dd'  // Set the date format, adjust if needed to show more than just year-month-day
-    }
+      datePattern: 'yyyy-MM-dd',  // Set the date format, adjust if needed to show more than just year-month-day
+      barFillColor: '#172233', // Set the color of the bars
+    },
+    backgroundColor: '#5A6374',  // Set the chart background color
   };
-    
+
+
   return (
     <div>
       <Chart

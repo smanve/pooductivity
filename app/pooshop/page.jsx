@@ -4,11 +4,12 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import notesImage from '../../public/notes.png';
-import POO from '../../public/POO.png';
 import frameImage from '../../public/frame.png';
 import NavBar from '../navbar/page';
+import POO from '../../public/POO.png';
 import './pooshop.css';
 
+// Import the POO image
 
 
 const fontStyle = {
@@ -55,6 +56,7 @@ export default function PooShop() {
         <div className="h-screen items-center justify-end overflow-hidden" style={{ backgroundColor: '#32365F' }}>
             <NavBar />
             <div className="flex h-full">
+                <Image src={POO} alt="POO Image" width={400} height={400} style={{ position: 'absolute', top: 280, left: 35, zIndex: 9999 }} />
                 <button className="button-effect">
                     Buy
                 </button>

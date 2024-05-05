@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
 .page-container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+}
+
+.font-cherry-bomb-one {
+    font-family: "Cherry Bomb One", system-ui;
 }
 
 .calendar-container {
