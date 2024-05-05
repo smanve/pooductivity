@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
-import notesImage from '../../public/notes.png';
-import POO from '../../public/POO.png';
-import frameImage from '../../public/frame.png';
+import notesImage from '../../public/fit3.png';
+import POO from '../../public/fit2.png';
+import frameImage from '../../public/fit1.png';
 import './poomain.css'; // Ensure your CSS path is correct
 import NavBar from '../navbar/page';
 import coinImg from '../../public/coin.png';

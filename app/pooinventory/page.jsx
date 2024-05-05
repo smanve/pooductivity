@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import notesImage from '../../public/notes.png';
-import POO from '../../public/POO.png';
-import frameImage from '../../public/frame.png';
+import notesImage from '../../public/fit3.png';
+import POO from '../../public/fit1.png';
+import frameImage from '../../public/fit2.png';
 import NavBar from '../navbar/page';
 import './pooinventory.css';
 
