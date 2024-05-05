@@ -26,14 +26,15 @@ function Page() {
 
     return (
         <div style={{ position: 'relative' }}>
-            <div className="rectangle"></div>
-            <div className="rectangle2"></div>
 
+            <div className="rectangle" style={{
+            }}></div>
+            <div className="rectangle2"></div>
             <div
                 style={{
                     position: 'absolute',
                     left: '620px',
-                    top: '600px',
+                    top: '650px',
                 }}
             >
                 <StarRating onStarSelect={handleStarSelect} />
@@ -42,23 +43,25 @@ function Page() {
             <table
                 style={{
                     position: 'absolute',
-                    left: '75px',
-                    top: '300px',
+                    left: '120px',
+                    top: '290px',
                     fontSize: '30px',
                     borderSpacing: '10px', // Add spacing between cells
+                    zIndex: 20, // Ensure the table appears in front
                 }}
             >
                 <thead>
                     <tr>
-                        <th style={{ padding: '10px' }}>Username</th> {/* Add padding to th */}
-                        <th style={{ padding: '10px' }}>Stars</th> {/* Add padding to th */}
+                        <th style={{ padding: '10px', fontFamily: "Sometype Mono, monospace" }}>Username</th>
+
+                        <th style={{ padding: '10px', fontFamily: "Sometype Mono, monospace" }}>Stars</th> {/* Add padding to th */}
                     </tr>
                 </thead>
                 <tbody>
                     {users.map((user, index) => (
                         <tr key={index}>
-                            <td style={{ padding: '10px' }}>{user.username}</td> {/* Add padding to td */}
-                            <td style={{ padding: '10px' }}>{user.stars}</td> {/* Add padding to td */}
+                            <td style={{ padding: '10px', zIndex: 100, fontFamily: "Sometype Mono, monospace" }}>{user.username}</td> {/* Add padding to td */}
+                            <td style={{ padding: '10px', zIndex: 10, fontFamily: "Sometype Mono, monospace" }}>{user.stars}</td> {/* Add padding to td */}
                         </tr>
                     ))}
                 </tbody>
@@ -67,28 +70,29 @@ function Page() {
             <div
                 style={{
                     position: 'absolute',
-                    left: '850px',
+                    left: '820px',
                     top: '300px',
                     transform: 'translate(-50%, -50%)',
                     fontSize: '24px',
                     color: 'black',
                     zIndex: 1,
+                    fontFamily: "Sometype Mono, monospace",
 
                     className: "ating" // Ensure it's displayed in front of the image
                 }}
             >
-                Ating
+                Poo
             </div>
-
 
             <div
                 style={{
                     position: 'absolute',
-                    left: '850px',
+                    left: '820px',
                     top: '280px',
                     transform: 'translate(-50%, -50%)',
                     fontSize: '24px',
                     color: 'black',
+                    fontFamily: "Sometype Mono, monospace",
                     zIndex: 1,
                     // Ensure it's displayed in front of the image
                 }}
@@ -99,24 +103,23 @@ function Page() {
             <div
                 style={{
                     position: 'absolute',
-                    left: '850px',
-                    top: '130px',
+                    left: '869px',
+                    top: '110px',
                     transform: 'translate(-50%, -50%)',
-                    fontSize: '24px',
-                    color: 'black',
+                    fontSize: '52px',
+                    color: '#992121',
                     zIndex: 1,
-                    // Ensure it's displayed in front of the image
+                    fontFamily: "Cherry Bomb One, system-ui"
                 }}
+                className="snow-day" // Use the correct class name
             >
-                Beach Day
+                Snow Day
             </div>
-
-
 
             <div
                 style={{
                     position: 'absolute',
-                    left: '130px',
+                    left: '180px',
                     top: '130px',
                 }}
             >
@@ -131,21 +134,39 @@ function Page() {
                 style={{
                     position: 'absolute',
                     left: '600px',
-                    top: '100px',
+                    top: '80px',
                 }}
             >
                 <Image
                     src="/img/themecontainer.png"
                     alt="theme container"
-                    width={500}
-                    height={141}
+                    width={550}
+                    height={181}
                 />
             </div>
             <div
                 style={{
                     position: 'absolute',
-                    left: '300px',
-                    top: '385px',
+                    left: '345px',
+                    top: '375px',
+                    zIndex: 50,
+                }}
+            >
+                <Image
+                    src="/img/star.png"
+                    alt="theme container"
+                    width={22}
+                    height={22}
+
+                />
+            </div>
+
+            <div
+                style={{
+                    position: 'absolute',
+                    left: '345px',
+                    top: '440px',
+                    zIndex: 50,
                 }}
             >
                 <Image
@@ -159,8 +180,9 @@ function Page() {
             <div
                 style={{
                     position: 'absolute',
-                    left: '300px',
-                    top: '450px',
+                    left: '345px',
+                    top: '500px',
+                    zIndex: 50,
                 }}
             >
                 <Image
@@ -170,33 +192,56 @@ function Page() {
                     height={22}
                 />
             </div>
-
             <div
                 style={{
                     position: 'absolute',
-                    left: '300px',
-                    top: '517px',
+                    left: '60px',
+                    top: '360px',
+                    zIndex: 2, // Adjust the z-index to make it appear in front
                 }}
             >
-                <Image
-                    src="/img/star.png"
-                    alt="theme container"
-                    width={22}
-                    height={22}
-                />
+                <div style={{ position: 'relative', left: '60px', }}>
+                    <Image src="/img/textbox.png" alt="textbox" width={250} height={150} />
+                </div>
             </div>
 
             <div
                 style={{
                     position: 'absolute',
-                    left: '600px',
-                    top: '200px',
+                    left: '60px',
+                    top: '430px',
+                    zIndex: 2, // Adjust the z-index to make it appear in front
+                }}
+            >
+                <div style={{ position: 'relative', left: '60px', }}>
+                    <Image src="/img/textbox.png" alt="textbox" width={250} height={150} />
+                </div>
+            </div>
+
+            <div
+                style={{
+                    position: 'absolute',
+                    left: '60px',
+                    top: '490px',
+                    zIndex: 2, // Adjust the z-index to make it appear in front
+                }}
+            >
+                <div style={{ position: 'relative', left: '60px', }}>
+                    <Image src="/img/textbox.png" alt="textbox" width={250} height={150} />
+                </div>
+            </div>
+
+            <div
+                style={{
+                    position: 'absolute',
+                    left: '550px',
+                    top: '180px',
                 }}
             >
                 <Image
                     src="/img/runway.png"
                     alt="runway"
-                    width={500}
+                    width={600}
                     height={200}
                 />
             </div>

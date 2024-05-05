@@ -1,12 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link'; // Import Link from 'next/link'
+import './theme.css';
 
 function Page() {
-    const handleJoinClick = () => {
-        // Redirect to another site when the button is clicked
-        window.location.href = 'https://www.google.com/'; // Replace 'https://example.com/another-page' with the URL of the page you want to redirect to
-    };
-
     return (
         <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
             <Image
@@ -24,29 +21,29 @@ function Page() {
                 />
             </div>
 
-
-
-            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'white', fontSize: '36px' }}>
-                <p>Theme for today: </p>
-                <p style={{ fontSize: '24px' }}>Beach Day</p>
+            <div style={{ position: 'absolute', top: '54%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'white', fontSize: '36px' }}>
+                <p style={{ fontSize: '70px', color: "#FFD80B", fontFamily: "Cherry Bomb One, system-ui" }}>Theme for today: </p>
+                <p style={{ fontSize: '100px', marginBottom: '36px', fontFamily: "Cherry Bomb One, system-ui" }}>Beach Day</p>
             </div>
 
-            {/* Your content goes here */}
+            {/* Use Link component to navigate to "/rank" */}
             <div style={{ position: 'absolute', top: '80%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-                <button
-                    style={{
+                <Link href="/rank">
+                    <a style={{
                         backgroundColor: 'white',
                         border: '2px solid white',
-                        padding: '10px 20px',
-                        fontSize: '16px',
+                        padding: '14px 35px',
+                        fontSize: '27px',
                         cursor: 'pointer',
-                        borderRadius: '5px',
-                    }}
-                    onClick={handleJoinClick}
-
-                >
-                    Join
-                </button>
+                        borderRadius: '20px',
+                        textDecoration: 'none', // Remove underline
+                        color: 'black', // Change text color
+                        fontFamily: "Sometype Mono, monospace",
+                        fontWeight: 'bolder'
+                    }}>
+                        Join
+                    </a>
+                </Link>
             </div>
         </div>
     );
