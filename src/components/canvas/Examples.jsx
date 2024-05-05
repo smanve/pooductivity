@@ -66,3 +66,10 @@ export function Dog(props) {
 
   return <primitive object={scene} {...props} />
 }
+export function ShibaGlasses(props) {
+  const { scene } = useGLTF('/shiba-glasses.glb')
+
+  useFrame((state, delta) => (scene.rotation.y += delta))
+
+  return <primitive object={scene} {...props} />
+}
