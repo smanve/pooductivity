@@ -12,7 +12,7 @@ export default function SignUp() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowForm(true);
-        }, 2000); // Delay of 3000ms or 3 seconds
+        }, 3600); // Delay of 3000ms or 3 seconds
 
         return () => clearTimeout(timer);
     }, []);
@@ -25,7 +25,7 @@ export default function SignUp() {
     return (
         <div className="video-container">
             <video autoPlay muted loop className="background-video">
-                <source src="/boat-video.mp4" type="video/mp4" />
+                <source src="/bgg.mp4" type="video/mp4" />
             </video>
             {showForm && (
                 <div className="signup-form-container">
