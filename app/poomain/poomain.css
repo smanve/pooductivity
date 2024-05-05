@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
 
 .home-page-container {
     display: flex;
@@ -17,7 +18,32 @@
     background: linear-gradient(to bottom, #32365F 66%, #32365F 0%);
 }
 
+.nav-link,
+.button-glow {
+    /* Assuming you add 'button-glow' class to your button elements */
+    transition: all 0.3s ease;
+    /* Ensures smooth transition effects */
+    cursor: pointer;
+    /* Changes the cursor to a pointer to indicate it's clickable */
+}
 
+.button-glow img {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.nav-link:hover,
+.button-glow:hover img {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9));
+    transform: scale(1.05);
+}
+
+.nav-link:active,
+.button-glow:active img {
+    filter: drop-shadow(0 5px 5px rgba(100, 100, 100, 0.2));
+    transform: translateY(2px);
+    transform: scale(0.95);
+}
 
 .shop-container {
     position: absolute;
@@ -38,13 +64,13 @@
 }
 
 .notes-image {
-    width: 400px;
+    width: 440px;
     /* Adjust size according to your image */
-    height: 400px;
+    height: 440px;
     /* Maintain the aspect ratio */
-    margin-left: 25px;
-    margin-right: 10px;
-    margin-top: 95px;
+    margin-left: 12px;
+    margin-right: 8px;
+    margin-top: 58px;
     /* Add space between images */
     z-index: 2;
     /* Ensure images are displayed in front of the triangle */
@@ -55,9 +81,9 @@
     /* Adjust size according to your image */
     height: auto;
     /* Maintain the aspect ratio */
-    margin-left: 20px;
+    margin-left: 7px;
     margin-right: -10px;
-    margin-top: 100px;
+    margin-top: 92px;
     /* Add space between images */
     z-index: 2;
     /* Ensure images are displayed in front of the triangle */
@@ -96,7 +122,7 @@
 
 .image-text1 {
     position: absolute;
-    top: 56%;
+    top: 54%;
     left: 14.8%;
     /* Adjusted from 50% to 30% to shift the text to the left */
     transform: translate(-50%, -50%);
@@ -118,7 +144,7 @@
     transform: translate(-50%, -50%);
     color: black;
     /* Color of the text */
-    font-size: 40px;
+    font-size: 35px;
     /* Size of the text */
     z-index: 3;
     font-weight: bolder;
@@ -137,7 +163,7 @@
     /* Size of the text */
     z-index: 3;
     font-weight: 800;
-    font-family: "Poetsen One", sans-serif;
+    font-family: "Cherry Bomb One", system-ui;
 }
 
 .image-text3 {
@@ -188,4 +214,39 @@
     left: 108px;
     z-index: 2;
     font-family: 'Sometype Mono', monospace;
+}
+
+/* poomain.css */
+.coin-change-container {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: black;
+    z-index: 999;
+    animation: fadeOut 1s ease-in-out;
+}
+
+/* Corrected CSS for "hi" text */
+/* poomain.css */
+
+.hi-text {
+    font-size: 20px;
+    /* Example font size */
+    color: white;
+    /* Example color */
+    /* Add any additional styling here */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

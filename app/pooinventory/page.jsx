@@ -7,6 +7,7 @@ import notesImage from '../../public/notes.png';
 import POO from '../../public/POO.png';
 import frameImage from '../../public/frame.png';
 import NavBar from '../navbar/page';
+import './pooinventory.css';
 
 
 
@@ -46,9 +47,11 @@ export default function PooShop() {
         <div className="h-screen items-center justify-end overflow-hidden" style={{ backgroundColor: '#32365F' }}>
             <NavBar />
             <div className="flex h-full">
-                <button className="rounded-lg bg-blue-500 px-8 py-3 text-lg font-bold text-black shadow-md" style={{ position: 'absolute', marginTop: '630px', marginLeft: '775px', backgroundColor: '#E7E1D5', fontSize: '30px', borderRadius: '25px', paddingLeft: '60px', paddingRight: '60px', boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.2)' }}>
+                <button className="button-effect">
                     Equip
                 </button>
+
+
                 <div className="absolute left-0 top-0 opacity-50" style={{ backgroundColor: 'black', width: '500px', height: '500px', zIndex: 0, borderRadius: '25px', marginLeft: '600px', marginTop: '210px' }}></div>
                 <div className="flex flex-col items-center space-y-2 p-2" style={{ width: '70%', marginBottom: '-100px', marginRight: '-50px', marginTop: '130px' }}>
                     <div className="grid grid-cols-3 grid-rows-5 gap-2" style={{ marginBottom: '-800px', marginRight: '-693px' }}>
@@ -64,7 +67,7 @@ export default function PooShop() {
                                 key={category}
                                 onClick={() => handleCategoryClick(category)}
                                 className={`h-28 w-60 rounded-lg text-center ${category === activeCategory ? 'bg-customYellow1' : 'bg-customYellow hover:bg-customYellow'}`}
-                                style={{ color: '#172233', fontSize: '37px', fontWeight: 'bold', marginLeft: '520px' }}
+                                style={{ color: '#172233', fontFamily: "'Sometype Mono', monospace", fontSize: '37px', fontWeight: 'bold', marginLeft: '520px' }}
                             >
                                 {category.charAt(0).toUpperCase() + category.slice(1)}
                             </button>

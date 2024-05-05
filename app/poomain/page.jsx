@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 import notesImage from '../../public/notes.png';
@@ -12,15 +12,18 @@ import Shop from '../shop/page';
 import calendarIcon from '../../public/calendarIcon.png';
 import trophyIcon from '../../public/trophyIcon.png';
 
+
 const PooMain = () => {
     const [coins, setCoins] = useState(100); // State to track coins
+    const [showChange, setShowChange] = useState(false); // State to control visibility of change in coins
 
     // Function to handle checkbox change
     const handleCheckboxChange = (event) => {
+        const change = event.target.checked ? 5 : -5; // Determine change in coins
+        setCoins(coins => coins + change); // Update coins state
         if (event.target.checked) {
-            setCoins(coins => coins + 5); // Increment coins by 5 for each checked box
-        } else {
-            setCoins(coins => coins - 5); // Decrement coins by 5 if unchecked
+            setShowChange(true); // Show change in coins
+            setTimeout(() => setShowChange(false), 1000); // Hide change after 3 seconds
         }
     };
 
@@ -32,24 +35,24 @@ const PooMain = () => {
                         <Image src={coinImg} alt="Coin" width={80} height={80} />
                         <span style={{ fontSize: '30px', fontWeight: 'bold', marginRight: '950px', color: 'white' }}>{coins}</span>
                         <Link href="/poomain">
-                            <a className="nav-link" style={{ marginTop: '12px', marginRight: '30px', display: 'flex', alignItems: 'center', zIndex: 10 }}>
+                            <a className="nav-link " style={{ marginTop: '12px', marginRight: '30px', display: 'flex', alignItems: 'center', zIndex: 10 }}>
                                 <Image src={POO} alt="About Us" width={70} height={70} />
                             </a>
                         </Link>
                         <Link href="/pooshop">
-                            <a className="nav-link" style={{ marginTop: '5px', marginRight: '30px', display: 'flex', alignItems: 'center', zIndex: 1 }}>
+                            <a className="nav-link " style={{ marginTop: '5px', marginRight: '30px', display: 'flex', alignItems: 'center', zIndex: 1 }}>
                                 <Image src={trophyIcon} alt="Contact Us" width={60} height={60} />
                             </a>
                         </Link>
                         <Link href="/contact">
-                            <a className="nav-link" style={{ marginTop: '5px', display: 'flex', alignItems: 'center', zIndex: 1 }}>
+                            <a className="nav-link " style={{ marginTop: '5px', display: 'flex', alignItems: 'center', zIndex: 1 }}>
                                 <Image src={calendarIcon} alt="Contact Us" width={60} height={60} />
                             </a>
                         </Link>
                     </nav>
                 </div>
             </div>
-            <div className="image-text20">Poo</div>
+            <div className="image-text20" >Poo</div>
             <div className="images-container">
                 <div className="image-container">
                     <Image src={notesImage} alt="Notes Image" className="notes-image" />
@@ -84,11 +87,21 @@ const PooMain = () => {
             <div className="shop-container">
                 <Shop />
             </div>
-            <div style={{ display: 'absolute', justifyContent: 'space-around', fontFamily: "'Sometype Mono', monospace", marginTop: '-7px', marginLeft: '995px', fontSize: '21px', fontWeight: 'bold', color: 'white' }}>
+            {/* "Closet", "Medals", "Shop" navigation */}
+            <div style={{ position: 'absolute', justifyContent: 'space-around', fontFamily: "'Sometype Mono', monospace", marginLeft: '995px', marginTop: '350px', marginBottom: '-370px', fontSize: '21px', fontWeight: 'bold', color: 'white' }}>
                 <span style={{ margin: '0 31px' }}>Closet</span>
                 <span style={{ margin: '0 34px' }}>Medals</span>
                 <span style={{ margin: '0 31px' }}>Shop</span>
             </div>
+            {/* Displaying change in coins */}
+            {showChange && (
+                <div className="coin-change-container">
+                    <span className="hi-text">
+                        {coins > 100 ? `+$${coins - 100}` : coins < 100 ? `${coins - 100}` : ''}
+                    </span>
+                </div>
+            )}
+
         </div>
     );
 }

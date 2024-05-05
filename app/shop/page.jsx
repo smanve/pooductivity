@@ -20,7 +20,7 @@ export default function Contact() {
                 </Link>
                 {/* Link to Contact Us page with image */}
                 <Link href="/poomedal">
-                    <a className="nav-link" style={{ marginTop: '6px', marginRight: '50px', display: 'flex', alignItems: 'center', flexDirection: 'column', textAlign: 'center' }}>
+                    <a className="nav-link" style={{ marginTop: '6px', marginRight: '40px', display: 'flex', alignItems: 'center', flexDirection: 'column', textAlign: 'center' }}>
                         <Image src={medalIcon} alt="Contact Us" width={75} height={75} />
 
                     </a>
