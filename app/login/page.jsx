@@ -1,18 +1,17 @@
 'use client'
 
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './login.css'; // Ensure your CSS file is correctly linked
 import { useNavigate } from 'react-router-dom';
 import Link from 'next/link'; // Import Link from Next.js
-
+import bggg from '../../public/bggg.png';
+import Image from 'next/image'
 
 export default function LogIn() {
     return (
-        <div className="video-container">
-            <video autoPlay muted loop className="background-video">
-                <source src="/bg.mp4" type="video/mp4" />
-            </video>
+        <div className="image-container1">
+            <Image src={bggg} alt="Coin" wclassName="background-image" />
             <div className="signup-form-container">
                 <form className="signup-form">
                     <div className="form-title">Login!</div>
