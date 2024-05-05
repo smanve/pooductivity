@@ -26,6 +26,7 @@ function Page() {
     };
 
     return (
+
         <div style={{ position: 'relative' }}>
             <NavBar />
 
@@ -40,6 +41,26 @@ function Page() {
                 }}
             >
                 <StarRating onStarSelect={handleStarSelect} />
+            </div>
+
+            <div
+                style={{
+                    position: 'absolute',
+                    left: '820px',
+                    top: '500px',
+                    transform: 'translate(-50%, -50%)',
+                    fontSize: '24px',
+                    color: 'black',
+                    zIndex: 1,
+                    fontFamily: "Sometype Mono, monospace",
+                }}
+            >
+                <Image
+                    src="/img/poo.png"
+                    alt="poo"
+                    width={300}
+                    height={300}
+                />
             </div>
 
             <table
@@ -70,6 +91,7 @@ function Page() {
             </table>
 
             <div
+
                 style={{
                     position: 'absolute',
                     left: '820px',
